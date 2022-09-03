@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+
 import './App.css';
+import WeatherCard from './components/WeatherCard';
+
+
 
 function App() {
+    
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div>
+        <WeatherCard />
+      </div>
+    </>
   );
 }
 
 export default App;
+
+// export async function getStaticProps() {
+//     try {
+//         const res = await fetch(
+//             `https://api.tomorrow.io/v4/timelines?location=-73.98529171943665,40.75872069597532&fields=temperature&timesteps=1h&units=metric&apikey=2B4qpsm1KDwpRY653c60l16D0lcLehYN`
+//         );
+//         const result = res.json;
+//         console.log(result);
+
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
+
+
